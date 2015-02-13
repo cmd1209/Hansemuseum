@@ -1,0 +1,70 @@
+.flex-boxes {
+  ///////////////////////////////////////////////////////////////////////////////////
+  a {
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+  $flex-box-border-color: $light-gray;
+  $flex-box-border: 1px solid $flex-box-border-color;
+  $flex-box-background: lighten($light-gray, 10%);
+  $flex-box-gutter: 0.5em;
+  $flex-box-width: 18em;
+  $flex-box-color: $base-font-color;
+  margin: -0.5em 0 2.5em -0.5em;
+
+  width: calc(100% + 1em);
+
+    @include clearfix;
+    @include display(flex);
+    @include justify-content(center);
+    @include align-items(stretch);
+    @include flex-wrap(wrap);
+    clear: both;
+    text-align: left;
+
+  .flex-box {
+    @include transition (all 0.2s ease-in-out);
+    @include flex(2 2 15em);
+    @include align-self(stretch);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    margin: $flex-box-gutter;
+    position: relative;
+    min-height: 15em;
+    overflow: hidden;
+    p{
+      font-size: 85%;
+    }
+    &:focus, &:hover{
+      opacity: 0.7;
+    }
+
+    .flex-title {
+      h4{
+        color: $red;
+      }
+      text-transform: uppercase;
+      background-color: $dark-blue;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      padding: 0.5em 1em 0.7em 1em;
+      z-index: 1;
+      text-align: center;
+
+    }
+    &:nth-of-type(1), &:nth-of-type(4){
+      @include flex(1 1 40em);
+      min-height: 15em;
+    }
+
+    p {
+      color: $flex-box-color;
+      line-height: 1.5em;
+      margin: auto;
+    }
+  }
+}

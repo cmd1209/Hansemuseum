@@ -1,0 +1,80 @@
+// Typography
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
+
+
+$sans-serif: lato, sans-serif;
+$serif: $georgia;
+$base-font-family: $sans-serif;
+$nav-font-family: 'Ubuntu', sans-serif;
+$header-font-family: 'Titillium Web', sans-serif;
+
+// Sizes
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+$unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); // Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
+$header-line-height: $base-font-size * 1.25;
+$base-border-radius: em(5);
+
+// Color-Pallette
+$dark-blue: #190f32;
+$red: #b00606;
+$primary-color: #36888b;
+$accent-color: #b00606;
+$accent-color2: #b00606;
+
+$medium-gray: #8e9192;
+$light-gray: lighten($medium-gray, 42);
+$dark-gray: darken($medium-gray, 7);
+$darker-gray: darken($medium-gray, 14);
+$darkest-gray: darken($medium-gray, 21);
+
+$base-button-color: $primary-color;
+
+// Background Color
+$base-background-color: darken($light-gray, 10);
+
+// Font Colors
+$base-font-color: $dark-gray;
+$font-invert: invert($dark-gray);
+
+// Link Colors
+$base-link-color: $primary-color;
+$hover-link-color: $accent-color;
+$base-button-color: $base-link-color;
+$hover-button-color: $hover-link-color;
+
+// Border color
+$base-border-color: $light-gray;
+
+// Flash Colors
+$alert-color: $accent-color;
+$error-color: $accent-color2;
+$notice-color: $accent-color;
+$success-color: $primary-color;
+
+// Forms
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $accent-color;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;
+
+@mixin box-shadow{
+    -webkit-box-shadow: 0px 10px 10px -5px $medium-gray;
+    -moz-box-shadow: 0px 10px 10px -5px $medium-gray;
+    box-shadow: 0px 10px 10px -5px $medium-gray;
+}
+
+
+
+
+
+$large-screen:  new-breakpoint(max-width 1200px 12);
+$medium-screen: new-breakpoint(max-width  992px 12);
+$small-screen:  new-breakpoint(max-width  768px  6);

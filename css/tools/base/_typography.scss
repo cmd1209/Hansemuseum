@@ -1,0 +1,144 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: $base-background-color;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $unitless-line-height;
+}
+
+selection{
+    color: black;
+    background-color: $accent-color;
+  }
+
+h1, h2, h3, h4, h5, h6, blockquote {
+  font-family: $header-font-family;
+  line-height: $header-line-height;
+  margin: 0;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  color: $primary-color;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
+}
+
+h2 {
+  font-size: $base-font-size * 2; // 16 * 2 = 32px
+}
+
+h3{
+  font-size: $base-font-size * 1.75; // 16 * 1.75 = 28px
+}
+
+h4{
+  font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
+}
+
+h5 {
+  font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
+}
+
+h6 {
+  font-size: $base-font-size;
+}
+
+p {
+  margin: 0 0 ($base-line-height * .5);
+}
+
+p.intro{
+  font-size: $base-font-size * 1.25;
+  margin: 0 0 ($base-line-height * 2);
+}
+
+a {
+  @include transition(color 0.1s linear);
+  color: $base-link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-link-color;
+  }
+
+  &:active, &:focus {
+    color: $hover-link-color;
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: 1px solid $base-border-color;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-line-height 0;
+}
+
+img, .wp-caption {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+}
+p.wp-caption-text{
+  color: lighten($base-font-color, 10);
+  padding-left: 1em;
+}
+
+blockquote{
+  position: relative;
+  background-color: $dark-blue;
+  color: white;
+  text-align: center;
+  margin: 2em 0;
+  padding: 2em;
+  line-height: 2em;
+  font-family: 'Libre Baskerville', serif;
+  font-size: $base-font-size * 1.5; // 16 * 2 = 32px
+  &:before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    @include triangle(75px, $base-background-color, down);
+    @include transform(translateX(-50%));
+    z-index: 999;
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    @include triangle(75px, $base-background-color, up);
+    @include transform(translateX(-50%));
+    z-index: 999;
+  }
+  em{
+    font-family: $header-font-family;
+    font-size: 1.25em;
+    color: $red;
+    font-style: normal;
+    margin: 0.25em;
+  }
+  @include media($medium-screen){
+    margin: 0;
+    padding: 2em;
+  }
+}
+cite {
+  color: $base-font-color;
+  font-style: italic;
+  font-family: $base-font-family;
+  font-size: $base-font-size / 2;
+
+  &:before {
+    content: '\2014 \00A0';
+  }
+}
+
+::selection{
+    color: white;
+    background-color: $primary-color;
+  }

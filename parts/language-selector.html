@@ -1,0 +1,7 @@
+        <?php $currentlang = get_bloginfo('language'); if($currentlang=="en-US"): ?>
+            <?php include("parts/slideshow.php"); ?>
+        <?php elseif($currentlang=="de-DE"): ?>
+            <?php include('parts/slideshow-de.php') ?>
+        <?php else: ?>
+            <p>some other language is selected</p>
+        <?php endif; ?>

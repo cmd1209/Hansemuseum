@@ -1,0 +1,45 @@
+.tablepress
+  tbody td
+    vertical-align: middle!important
+table.price
+  border: none
+  table-layout: auto
+  tr td:nth-child(1), tr td:nth-child(2), tr td:nth-child(3)
+    font-size: 1.25em
+.tablepress.price
+  i
+    font-size: 0.65em!important
+  th
+    background-color: $dark-blue
+    color: white
+  th.column-2
+    border-top: 1em solid lighten($dark-blue, 5)
+    border-bottom: 1em solid lighten($dark-blue, 5)
+    background-color: lighten($dark-blue, 5)
+  th, td
+    text-align: center
+    border-top: none
+    border-bottom: none
+  tbody td.column-2
+    width: 45%
+  tr:nth-child(2n-1)
+    background-color: darken($primary-color, 5)
+    color: white
+    td.column-2
+      background-color: $primary-color
+      border-top: 1em solid $primary-color
+      border-bottom: 1em solid $primary-color
+  tr:nth-child(2n)
+    background-color: darken(white, 5)
+    color: $base-font-color
+    td.column-2
+      background-color: white
+      border-top: 1em solid white
+      border-bottom: 1em solid white
+  td.column-1, td.column-3
+    font-size: 2.5em
+    @include media($small-screen)
+      font-size: 1.75em
+    span
+      font-size: 65%
+      vertical-align: top

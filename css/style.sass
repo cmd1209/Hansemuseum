@@ -1,0 +1,123 @@
+@import 'tools/tools-index'
+@import 'tools/owl/owl.carousel.css'
+@import 'tools/owl/owl.theme.css'
+@import 'parts/mobilenav'
+@import 'parts/nav'
+@import 'parts/hero'
+@import 'parts/article'
+@import 'parts/sidebar'
+@import 'parts/footer'
+@import 'parts/breakup'
+@import 'parts/tablepress'
+
+.pcontain
+  @include columns(2)
+  @include media($small-screen)
+    @include columns(1)
+
+.left, .right
+  @include span-columns(6)
+  @include media($small-screen)
+    @include span-columns(6)
+
+.wrap
+  overflow: hidden
+  @include outer-container
+  padding: 0 1em
+  @include media($small-screen)
+    padding: 0 1em
+
+.no-padding
+  padding: 0 1em
+
+.span-columns-9
+  @include span-columns(9)
+  @include media($small-screen)
+    @include span-columns(6)
+.span-columns-8
+  @include span-columns(8)
+  @include media($small-screen)
+    @include span-columns(6)
+.span-columns-6
+  @include span-columns(6)
+  @include media($small-screen)
+    @include span-columns(6)
+.span-columns-4
+  @include span-columns(4)
+  @include media($small-screen)
+    @include span-columns(6)
+.span-columns-3
+  @include span-columns(3)
+  @include media($small-screen)
+    @include span-columns(6)
+
+.content
+  padding-top: 1em
+
+section header.section-header
+  width: 100%
+  background-color: white
+  padding: 1em
+  position: relative
+  margin-bottom: 3em
+  h2
+    text-align: center
+    text-transform: uppercase
+    color: $dark-blue
+section header.section-header:after
+  content: ""
+  position: absolute
+  left: 50%
+  bottom: 0px
+  @include triangle(75px, white, down)
+  +transform(translate(-50%, 100%))
+  z-index: 999
+
+footer
+  text-align: center
+section:nth-child(2n)
+  background-color: $dark-blue
+section:nth-child(2n+1)
+  background-color:  lighten($dark-blue,3)
+section.main-content
+  background-color: $base-background-color
+
+#owl-demo
+  .owl-item div
+    padding: 5px
+    border-radius: $base-border-radius
+  .owl-item img
+    display: block
+    width: 100%
+    height: auto
+
+header.pageheader
+  h1
+    text-align: left
+    margin-bottom: 0.5em
+
+// Take Page Bulder Widget Titles and makes them the same as H5 Tag in my Sass
+.widget-title
+  @extend h5
+  margin-bottom: 0.3em
+// Bullet Lists in Text
+.textwidget
+  ul
+    list-style-type: square
+    padding-left: 1em
+  li
+    margin-bottom: 0.5em
+.two-column
+  @include columns(2 8em)
+  @include media($small-screen)
+    @include columns(1)
+
+#post-404
+  padding: 3em 0
+  text-align: center
+  @include span-columns(8)
+  @include shift(2)
+  h1
+    margin-bottom: 2em
+.post
+  margin-bottom: 3em
