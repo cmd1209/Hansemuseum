@@ -1,10 +1,10 @@
 // hero elements
 section.hero
-  min-height: 500px
+  height: 500px
   position: relative
   background-color: $dark-blue
   @include media($small-screen)
-    min-height: 250px
+    height: 250px
     overflow: hidden
   .slides
     width: 100%
@@ -24,14 +24,17 @@ section.hero
     z-index: 888
     position: relative
     padding: 2.5em 2em
-    background-color: rgba($dark-blue, 0.92)
+    @include background-image(linear-gradient($dark-blue 35%, $primary-color 100%))
     text-align: center
+    box-shadow: 0 5px 10px -5px black
     @include media($small-screen)
       @include span-columns(6)
       @include shift(0)
       background-color: $dark-blue
       padding: 1em
     h2
+      font-size: 2.15em
+      text-shadow: 0 2px 3px black
       color: $red
       text-transform: uppercase
       vertical-align: center

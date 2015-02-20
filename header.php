@@ -49,11 +49,9 @@
 <header class="header clear" role="banner">
 <h3 class="banner-head"><?php bloginfo('name'); ?></h3>
 <div class="wrap no-padding">
-    <div class="logo">
-        <a href="<?php echo home_url(); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-round.svg" alt="Logo" >
+        <a href="<?php echo home_url(); ?>" class="logo">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-round.svg"  width="179px" height="176px" alt="Logo" >
         </a>
-    </div>
     <nav class="service" role="navigation">
       <?php service_nav(); ?>
     </nav>

@@ -26,9 +26,8 @@
     @include transition (all 0.2s ease-in-out);
     @include flex(2 2 15em);
     @include align-self(stretch);
-    background-position: top;
+    background-size: cover!important;
     background-repeat: no-repeat;
-    background-size: cover;
     display: block;
     margin: $flex-box-gutter;
     position: relative;
@@ -39,9 +38,8 @@
       font-size: 85%;
     }
     &:focus, &:hover{
-      box-shadow: 0 0 10px -1px black;
+      box-shadow: 0 2px 20px 3px $primary-color;
     }
-
     .flex-title {
       h4{
         color: $base-background-color;

@@ -4,14 +4,11 @@
 
 	</section>
 	<section class="main-content">
-		<div class="wrap">
-
-			<div class="span-columns-8 content">
+		<div class="wrap no-padding">
+			<div class="span-columns-8 content logo-spacing">
 			<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?>
-
 				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 					<?php $cat = get_the_category(); $cat = $cat[0]; ?>
-
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header>
 						<h3><?php the_title(); ?></h3>
