@@ -1,5 +1,5 @@
 body
-  background-color: $dark-blue
+  @include background(linear-gradient($dark-blue, $red) left no-repeat)
 .contentwrap
   position: relative
 
@@ -15,18 +15,20 @@ body
   display: none
   z-index: 9999
   position: absolute
-  top: 5px
-  left: 5px
-  color: $medium-gray
-  background-color: white
+  top: 6px
+  left: 6px
+  color: lighten($light-red,10)
+  border: 4px solid $light-red
+  background-color:  $red
   width: 2em
   height: 2em
   border-radius: 50%
   text-align: center
-  line-height: 2em
+  line-height: 1.5em
   &:hover
-    background-color: $accent-color
-    color: white
+    background-color: $primary-color
+    border: 4px solid lighten($primary-color, 10)
+    color: lighten($primary-color, 15)
   @include media($small-screen)
     display: block
 

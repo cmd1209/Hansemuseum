@@ -34,16 +34,17 @@
     position: relative;
     min-height: 15em;
     overflow: hidden;
+    box-shadow: 0 6px 10px -2px black;
     p{
       font-size: 85%;
     }
     &:focus, &:hover{
-      opacity: 0.7;
+      box-shadow: 0 0 10px -1px black;
     }
 
     .flex-title {
       h4{
-        color: $red;
+        color: $base-background-color;
       }
       text-transform: uppercase;
       background-color: $dark-blue;
@@ -54,7 +55,15 @@
       padding: 0.5em 1em 0.7em 1em;
       z-index: 1;
       text-align: center;
-
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 3em;
+      @include triangle(75px, $dark-blue, down);
+      z-index: 2;
+      @include transform(translateX(-50%));
     }
     &:nth-of-type(1), &:nth-of-type(4){
       @include flex(1 1 40em);

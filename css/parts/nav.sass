@@ -14,14 +14,28 @@ h3.banner-head
     font-size: 120%
     margin: 0
     text-transform: uppercase
-
 .logo
-  @include span-columns(3)
+  top: 0.5em
+  position: absolute
+  @include size(14em)
+  z-index: 1000
+  @include media($medium-screen)
+    @include size(12em)
+    left: 0.5em
   @include media($small-screen)
     display: none
-  img
-    width: 100%
-    height: auto
+  a
+    display: block
+    img
+      width: 80%
+      max-width: 100%
+      height: auto
+      @include transition (all 0.25s ease-in-out)
+  &:hover
+    img
+      width: 83.5%
+      height: auto
+      @include transition (all 0.25s ease-in-out)
 
 nav.service, nav.main
   @include media($small-screen)
@@ -42,27 +56,35 @@ nav.service, nav.main
 nav.service
   text-align: right
   font-size: 85%
+  margin-bottom: 1.8em
 
 nav.main
   @include span-columns(12)
   position: relative
   text-align: center
-  font-size: 118%
+  font-size: 116%
+  @include media($medium-screen)
+    font-size: 110%
+    text-align: right
   @include media($small-screen)
     display: none
   ul li
     display: inline-block
     position: relative
-  ul li ul
-    min-width: 225px
-    display: none
-    top: 99%
-    left: -1em
-    text-align: left
+  ul li a
+    padding: 0.5em 0.3em
+  ul li > ul
+    opacity: 0
+    visibility: hidden
+    top: 98%
+    left: 50%
+    text-align: center
     position: absolute
     z-index: 1000
     padding: 0.5em 0
     background-color: white
+    @include transform(translateX(-50%))
+    @include transition(all .7s ease-in-out)
     a
       font-size: 0.8em
       padding: 0.5em 2em
@@ -71,15 +93,23 @@ nav.main
   ul li ul li
     white-space: nowrap
   ul li:hover > ul, ul li:focus > ul
-    display: block
+    @include transition(all .4s ease-in-out)
+    opacity: 1
+    visibility: visible
   ul li:hover > a
     color: $red!important
   ul li ul li ul
-    display: none
-    left: 100%
-    top: -0.5em
+    margin: 0
+    padding: 0
+    height: 0px
+    overflow: hidden
+    position: relative
+    @include transition(all .4s ease-in-out)
+  ul li ul li:hover > ul
+    height: 2em
+    @include transition(all .4s ease-in-out)
   ul li ul li ul li a
-    padding: 0.5em 1em
+    padding: 0em 0.5em
   li.current-menu-item a
     color: $red
 
@@ -108,12 +138,6 @@ nav.main
     .current-menu-item:after
       display: none
 
-
-a.signup
-  float: right
-  @include media($small-screen)
-    display: none
-
 .modal-container
   position: fixed
   max-width: 450px
@@ -140,7 +164,7 @@ a.signup
     display: none
     position: fixed
     content: ""
-    background-color: rgba($primary-color,0.95)
+    background-color: rgba($red,0.95)
     top: 0
     left: 0
     width: 100%

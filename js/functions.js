@@ -10,16 +10,14 @@ $(document).ready(function() {
   activator.click(function() {
     if (mobilewrap.is(':visible')) {
       mobilewrap.animate({left: -slideWidth},200);
-      activator.animate({left: '5px'},200);
+      activator.animate({left: '6px'}0);
       contentwrap.animate({left: '0'},200);
-      activator.css({position: 'absolute'});
       mobilewrap.delay(200).fadeOut();
     }
     else{
       mobilewrap.show().animate({left: '0'},200);
       contentwrap.animate({left: slideWidth},200);
-      activator.animate({left: slideWidth-activatorWidth-5},200);
-      activator.css({position: 'fixed'});
+      activator.animate({left: '1em'}0);
     }
   });
 });

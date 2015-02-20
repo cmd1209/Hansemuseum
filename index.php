@@ -3,7 +3,7 @@
         <section class="hero">
             <?php include("parts/slideshow.php"); ?>
         </section>
-        <section>
+        <section class="funny">
           <?php include("parts/breakup.php"); ?>
         </section>
         <section>

@@ -1,4 +1,4 @@
-//hero elements
+// hero elements
 section.hero
   min-height: 500px
   position: relative
@@ -14,32 +14,34 @@ section.hero
     left: 0
     bottom: 0
     right: 0
-    background-repeat: no-repeat!important
     background-size: cover!important
     text-align: center
-  .lockup
+  .lockup-container
     @include outer-container
-    margin: 0 auto
+  .lockup
+    @include span-columns(10)
+    @include shift(1)
     z-index: 888
     position: relative
-    padding: 2em 2em 2em 5em
+    padding: 2.5em 2em
     background-color: rgba($dark-blue, 0.92)
-    text-align: left
+    text-align: center
     @include media($small-screen)
+      @include span-columns(6)
+      @include shift(0)
       background-color: $dark-blue
       padding: 1em
     h2
       color: $red
       text-transform: uppercase
       vertical-align: center
-    span
-      margin-left: 0.5em
-      padding-left: 0.5em
-      border-left: 1px solid $light-gray
-      font-size: 70%
+    h2.textshift
+      font-size: 1.4em
       text-transform: none
       color: $light-gray
       font-family: 'Libre Baskerville', serif
+      line-height: 1.6em
+      margin-top: 0.5em
   .lockup:after
     content: ""
     position: absolute

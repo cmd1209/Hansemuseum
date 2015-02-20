@@ -43,7 +43,7 @@
         <?php mobile_nav(); ?>
     </nav>
 </div>
-<a href="#mobilewrap" class="mobileactivator">&#9776;</a>
+<a href="#mobilewrap" class="mobileactivator">&#9776</a>
 <div class="contentwrap"> <!-- content wrapper -->
 
 <header class="header clear" role="banner">
@@ -51,13 +51,12 @@
 <div class="wrap no-padding">
     <div class="logo">
         <a href="<?php echo home_url(); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" >
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-round.svg" alt="Logo" >
         </a>
     </div>
     <nav class="service" role="navigation">
       <?php service_nav(); ?>
     </nav>
-        <a href="#modal" class="signup">Newsletter</a>
     <nav class="main" role="navigation">
             <?php html5blank_nav(); ?>
     </nav>

@@ -4,12 +4,13 @@
     <section class="hero small">
       <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
       <div class="slides" style="background:url(<?php echo $featuredImage; ?>)center center;">
-
       </div>
     </section>
   <?php else: ?>
-<section>
-
+<section class="hero small">
+     <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id(297) ); ?>
+      <div class="slides" style="background:url(<?php echo $featuredImage; ?>)center center;">
+      </div>
 </section>
  <?php endif ?>
 <section class="main-content">
