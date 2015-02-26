@@ -22,9 +22,9 @@
 				</div>
 			</div>
 			<div class="footer-logo">
-				<a href="<?php echo home_url(); ?>">
-					<img src="http://hansemuseum.eu/wp-content/themes/EHM/images/logos/ehm-dark.svg" alt="Logo" >
-				</a>
+        <a href="<?php echo home_url(); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-round.svg"  width="179px" height="176px" alt="Logo" >
+        </a>
 			</div>
 							<!-- copyright -->
 				<p class="copyright">
