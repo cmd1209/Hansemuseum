@@ -1,5 +1,7 @@
 # [HTML5 Blank](http://html5blank.com)
 
+## I'm just going to keep all the html5blank stuff in check. Without it I would be lost!!!
+
 Powerful shell for rapidly deploying your WordPress projects.
 
 * Project: [github.com/toddmotto/html5blank](https://github.com/toddmotto/html5blank)
