@@ -26,6 +26,14 @@ $primary-color: #36888b;
 $accent-color: #b00606;
 $accent-color2: #b00606;
 
+
+// Alternative Colors
+// $dark-blue: #2d2516;
+// $primary-color: #b5864e;
+
+// Test for Warm Colors
+// $medium-gray: #938a79;
+
 $medium-gray: #8e9192;
 $light-gray: lighten($medium-gray, 42);
 $dark-gray: darken($medium-gray, 7);

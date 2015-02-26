@@ -47,7 +47,21 @@
 <div class="contentwrap"> <!-- content wrapper -->
 
 <header class="header clear" role="banner">
-<h3 class="banner-head"><?php bloginfo('name'); ?></h3>
+<div class="bannerinfo">
+<?php $currentlang = get_bloginfo('language'); if($currentlang=="en-GB"): ?>
+    <h2>European Hansemuseum</h2>
+    <h2 class="textshift">Travel to the Time of the Hanse</h2>
+<?php elseif($currentlang=="de-DE"): ?>
+    <h2><?php bloginfo('name'); ?> </h2>
+    <h2 class="textshift"><?php echo get_bloginfo ( 'description' );  ?></h2>
+<?php else: ?>
+  <p>some other language is selected</p>
+<?php endif; ?>
+
+
+
+</div>
+
 <div class="wrap no-padding">
         <a href="<?php echo home_url(); ?>" class="logo">
             <img src="<?php echo get_template_directory_uri(); ?>/img/logo-round.svg"  width="179px" height="176px" alt="Logo" >
@@ -60,4 +74,3 @@
     </nav>
 </div>
 </header>
-

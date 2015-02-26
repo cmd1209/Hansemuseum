@@ -43,6 +43,16 @@
     .flex-title {
       h4{
         color: $base-background-color;
+        position: relative;
+        &:after{
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 105%;
+          @include triangle(75px, $dark-blue, down);
+          z-index: 2;
+          @include transform(translateX(-50%));
+        }
       }
       text-transform: uppercase;
       background-color: $dark-blue;
@@ -53,15 +63,6 @@
       padding: 0.5em 1em 0.7em 1em;
       z-index: 1;
       text-align: center;
-    }
-    &:after{
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 3em;
-      @include triangle(75px, $dark-blue, down);
-      z-index: 2;
-      @include transform(translateX(-50%));
     }
     &:nth-of-type(1), &:nth-of-type(4){
       @include flex(1 1 40em);
