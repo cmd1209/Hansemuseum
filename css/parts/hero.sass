@@ -2,7 +2,7 @@
 section.hero
   height: 500px
   position: relative
-  background-color: $dark-blue
+  background-color: $base-color
   @include media($small-screen)
     display: none
   .slides
@@ -23,22 +23,22 @@ section.hero
   z-index: 888
   position: relative
   padding: 2.5em 2em
-  // background-color: $dark-blue
+  // background-color: $base-color
   // background-image: url("../art/backgrounds/stainless.png")
-  background-color: $dark-blue
-  // @include background-image(linear-gradient($dark-blue 35%, $primary-color 100%))
+  background-color: $accent-color2
+  // @include background-image(linear-gradient($base-color 35%, $primary-color 100%))
   text-align: center
   box-shadow: 0 5px 10px -5px black
   @include media($small-screen)
     @include span-columns(6)
     @include shift(0)
-    background-color: $dark-blue
+    background-color: $base-color
     padding: 1em
   h2
     font-size: 2.15em
     text-shadow: 0 2px 3px black
-    color: $red
-    text-transform: uppercase
+    color: white
+    // text-transform: uppercase
     vertical-align: center
   h2.textshift
     font-size: 1.4em

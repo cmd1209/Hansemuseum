@@ -1,8 +1,7 @@
 body
-  @include background(linear-gradient($dark-blue, $red) left no-repeat)
+  background-color: $accent-color2
 .contentwrap
   position: relative
-
 #mobilewrap
   position: absolute
   display: none
@@ -17,17 +16,17 @@ body
   position: absolute
   top: 6px
   left: 6px
-  color: lighten($light-red,10)
-  border: 4px solid $light-red
-  background-color:  $red
+  color: $base-font-color
+  border: 3px solid $accent-color2
+  background-color:  $base-color
   width: 2em
   height: 2em
   border-radius: 50%
   text-align: center
-  line-height: 1.5em
+  line-height: 1.75em
   &:hover
     background-color: $primary-color
-    border: 4px solid lighten($primary-color, 10)
+    border: 3px solid lighten($primary-color, 10)
     color: lighten($primary-color, 15)
   @include media($small-screen)
     display: block
@@ -46,4 +45,4 @@ nav.mobile
     display: block
     color: white
     &:hover
-      color: $red
+      color: $primary-color

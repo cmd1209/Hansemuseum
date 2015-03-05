@@ -26,7 +26,7 @@ $the_query = new WP_Query( $args ); ?>
 
     <a href="<?php the_permalink(); ?>" class="flex-box" style="background: url(<?php echo $thumb_url[0]; ?>)center center;">
     <div class="flex-title">
-    <h4><?php the_title(); ?></h4>
+    <h5><?php the_title(); ?></h5>
 <!--     <p><?php the_excerpt(); ?></p> -->
     </div>
   </a>

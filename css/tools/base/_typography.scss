@@ -89,14 +89,14 @@ p.wp-caption-text{
 
 blockquote{
   position: relative;
-  background-color: $dark-blue;
+  background-color: $base-color;
   color: white;
   text-align: center;
   margin: 2em 0;
   padding: 2em;
-  line-height: 2em;
-  font-family: 'Libre Baskerville', serif;
-  font-size: $base-font-size * 1.5; // 16 * 2 = 32px
+  line-height: 1.5em;
+  font-family: $header-font-family;
+  font-size: $base-font-size * 1.65; // 16 * 2 = 32px
   &:before{
     content: "";
     position: absolute;
@@ -118,7 +118,7 @@ blockquote{
   em{
     font-family: $header-font-family;
     font-size: 1.25em;
-    color: $red;
+    color: $accent-color;
     font-style: normal;
     margin: 0.25em;
   }

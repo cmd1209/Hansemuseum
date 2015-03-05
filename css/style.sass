@@ -1,4 +1,5 @@
 @import 'tools/tools-index'
+@import 'parts/webfonts'
 @import 'tools/owl/owl.carousel.css'
 @import 'tools/owl/owl.theme.css'
 @import 'parts/mobilenav'
@@ -61,10 +62,11 @@ section header.section-header
   padding: 1em
   position: relative
   margin-bottom: 3em
+  border-top: 1em solid $accent-color2
   h2
     text-align: center
-    text-transform: uppercase
-    color: $dark-blue
+    // text-transform: uppercase
+    color: $base-color
 section header.section-header:after
   content: ""
   position: absolute
@@ -76,12 +78,12 @@ section header.section-header:after
 
 footer
   text-align: center
-  background-color: $dark-blue
-  // background-image: url("../art/backgrounds/stainless.png")
+  background-color: $base-color
 section:nth-child(2n)
-  background-color: $dark-blue
+  background-color: $base-color
 section:nth-child(2n+1)
-  background-color:  lighten($dark-blue,3)
+  background-color:  $accent-color2
+  color: $base-font-color-light
 section.main-content
   background-color: $base-background-color
   overflow: hidden
@@ -125,6 +127,6 @@ header.pageheader
     margin-bottom: 2em
 .post
   margin-bottom: 3em
-section.funny
-  // background-image: url("../art/backgrounds/stainless.png")
-  @include background(linear-gradient($primary-color, $dark-blue) left no-repeat)
+// section.funny
+//   background-image: url("../art/backgrounds/stainless-light.png")
+//   @include background(linear-gradient($primary-color, $base-color) left no-repeat)

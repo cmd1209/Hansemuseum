@@ -5,11 +5,13 @@
 @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
 
 
-$sans-serif: lato, sans-serif;
-$serif: $georgia;
+// $sans-serif: lato, sans-serif;
+$sans-serif: 'PFCentroSansPro-Regular', sans-serif;
+$sans-serif-medium: 'PFCentroSansPro-Medium', sans-serif;
+$serif: 'PFCentroSerifPro-Regular', $georgia, serif;
 $base-font-family: $sans-serif;
-$nav-font-family: 'Ubuntu', sans-serif;
-$header-font-family: 'Titillium Web', sans-serif;
+$nav-font-family: $sans-serif-medium;
+$header-font-family: $serif;
 
 // Sizes
 $base-font-size: 1em;
@@ -19,23 +21,25 @@ $header-line-height: $base-font-size * 1.25;
 $base-border-radius: em(5);
 
 // Color-Pallette
-$dark-blue: #150c2a;
-$red: #9D0D1C;
-$light-red: #C10A25;
-$primary-color: #1f8c90;
-// $primary-color: #36888b;
-$accent-color: #b00606;
-$accent-color2: #b00606;
+$base-color: #2d2516;
+$primary-color: #B48550;
+$accent-color: #C50000;
+$accent-color2: #640101;
+$medium-gray: #938a79;
 
 
 // Alternative Colors
-// $dark-blue: #2d2516;
-// $primary-color: #b5864e;
+// $base-color: #150c2a;
+// $red: #9D0D1C;
+// lighten($accent-color, 10): #C10A25;
+// $primary-color: #1f8c90;
+// $primary-color: #36888b;
+// $accent-color: #b00606;
+// $accent-color2: #b00606;
+// $medium-gray: #8e9192;
 
-// Test for Warm Colors
-// $medium-gray: #938a79;
 
-$medium-gray: #8e9192;
+
 $light-gray: lighten($medium-gray, 42);
 $dark-gray: darken($medium-gray, 7);
 $darker-gray: darken($medium-gray, 14);
@@ -44,11 +48,11 @@ $darkest-gray: darken($medium-gray, 21);
 $base-button-color: $primary-color;
 
 // Background Color
-$base-background-color: darken($light-gray, 10);
+$base-background-color: darken($light-gray, 7);
 
 // Font Colors
 $base-font-color: $dark-gray;
-$font-invert: invert($dark-gray);
+$base-font-color-light: lighten($base-font-color, 20);
 
 // Link Colors
 $base-link-color: $primary-color;

@@ -21,11 +21,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer-logo">
-        <a href="<?php echo home_url(); ?>">
+
+        <a class="logo footer-logo" href="<?php echo home_url(); ?>">
             <img src="<?php echo get_template_directory_uri(); ?>/img/logo-round.svg"  width="179px" height="176px" alt="Logo" >
         </a>
-			</div>
+
 							<!-- copyright -->
 				<p class="copyright">
 					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>

@@ -6,7 +6,7 @@ header.header
 .bannerinfo
   display: none
   @include media($small-screen)
-    background-color: $dark-blue
+    background-color: $base-color
     display: block
     padding: 1em
   h2
@@ -20,7 +20,7 @@ header.header
     font-size: 1.2em
     text-transform: none
     color: $light-gray
-    font-family: 'Libre Baskerville', serif
+    font-family: $serif
     line-height: 1.6em
     margin-top: 0.5em
 a.logo
@@ -35,8 +35,8 @@ a.logo
     width: 100%
     height: auto
   &:hover
-    padding: 0.125em
     @include transition (all 0.25s ease-in-out)
+    @include transform(scale(0.9) rotate(3deg))
   @include media($medium-screen)
     @include size(10em)
     left: 0.5em
@@ -52,12 +52,12 @@ nav.service, nav.main
     @include transition (all 0.25s ease-in-out)
     font-family: $nav-font-family
     text-transform: uppercase
-    color: $dark-blue
+    color: $base-color
     padding: 0.5em
     display: block
     &:hover
       @include transition (all 0.25s ease-in-out)
-      color: $red
+      color: $accent-color
 
 nav.service
   text-align: right
@@ -89,7 +89,7 @@ nav.main
   a
     display: block
     &:hover
-      color: $red!important
+      color: $accent-color!important
   .menu-item .sub-menu
     @include background(linear-gradient(white, $base-background-color) left repeat)
     display: none
@@ -102,7 +102,7 @@ nav.main
     a
       display: block
       font-size: 0.8em
-      color: $dark-blue
+      color: $base-color
       padding: 0.5em 1em
 
   .sub-menu .menu-item
@@ -116,7 +116,7 @@ nav.main
 
 
   .current-menu-item a
-    color: $red
+    color: $accent-color
 
 // Targets Last List Element in the Main Navigation and Keeps it within the Wrap
 nav.main .menu-item:last-child
@@ -162,7 +162,7 @@ nav.main
     display: none
     position: fixed
     content: ""
-    @include background(linear-gradient(rgba($dark-blue,0.95), rgba($primary-color,0.95)) left no-repeat)
+    @include background(linear-gradient(rgba($base-color,0.95), rgba($primary-color,0.95)) left no-repeat)
     top: 0
     left: 0
     width: 100%
@@ -180,7 +180,7 @@ nav.main
     color: white
     text-align: center
     &:hover
-      background-color: $red
+      background-color: $accent-color
   &:target:before
     display: block
   &:target .modal-container
