@@ -1,12 +1,19 @@
 <?php get_header(); ?>
 <main role="main">
-    <section>
-
-    </section>
-    <section class="main-content">
+<section class="main-content">
         <div class="wrap">
+                    <div class="post-utilities">
+            <div class="span-columns-6">
+                <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?>
+            </div>
+            <div class="span-columns-6">
+                <div class="search-wrapper-fix">
+                    <?php include("searchform.php"); ?>
+                </div>
+            </div>
 
-            <div class="span-columns-8 content">
+            </div>
+
 
 
                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -22,15 +29,9 @@
 
 </div>
 
-
-
-
-
-<div class="span-columns-4">
-    <?php get_sidebar(); ?>
-</div>
-
-</div>
+<section class="current-news">
+  <?php include("parts/aktuell.php") ?>
+</section>
 
 </main>
 <?php get_footer(); ?>

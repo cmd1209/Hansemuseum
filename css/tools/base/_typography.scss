@@ -116,11 +116,7 @@ blockquote{
     z-index: 999;
   }
   em{
-    font-family: $header-font-family;
-    font-size: 1.25em;
     color: $accent-color;
-    font-style: normal;
-    margin: 0.25em;
   }
   @include media($medium-screen){
     margin: 0;

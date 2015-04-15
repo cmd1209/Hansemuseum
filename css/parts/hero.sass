@@ -13,24 +13,26 @@ section.hero
     left: 0
     bottom: 0
     right: 0
-    background-size: cover!important
     text-align: center
+    background:
+      position: bottom center!important
+      size: cover!important
+      repeat: no-repeat!important
 .lockup-container
   @include outer-container
 .lockup
-  @include span-columns(10)
-  @include shift(1)
   z-index: 888
-  position: relative
+  position: absolute
+  top: 50%
+  left: 50%
+  +transform(translate(-50%, -50%))
   padding: 2.5em 2em
-  // background-color: $base-color
-  // background-image: url("../art/backgrounds/stainless.png")
-  background-color: $accent-color2
-  // @include background-image(linear-gradient($base-color 35%, $primary-color 100%))
+  background-color: rgba($darkest-gray,0.85)
   text-align: center
+  @include span-columns(8)
   box-shadow: 0 5px 10px -5px black
   @include media($small-screen)
-    @include span-columns(6)
+    @include span-columns(7)
     @include shift(0)
     background-color: $base-color
     padding: 1em
@@ -47,7 +49,7 @@ section.hero
     font-family: 'Libre Baskerville', serif
     line-height: 1.6em
     margin-top: 0.5em
-.lockup:after
+.centralt:after
   content: ""
   position: absolute
   left: 50%

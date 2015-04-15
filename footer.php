@@ -2,6 +2,9 @@
 			<footer class="footer" role="contentinfo">
 			<div class="wrap">
 				<div class="span-columns-6">
+				            <div class="search-wrapper">
+                <?php include("searchform.php"); ?>
+            </div>
 					<div class="span-columns-6 fix">
 					<?php html5blank_nav(); ?>
 					</div>
@@ -21,11 +24,9 @@
 					</div>
 				</div>
 			</div>
-
-        <a class="logo footer-logo" href="<?php echo home_url(); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-round.svg"  width="179px" height="176px" alt="Logo" >
+        <a href="<?php echo home_url(); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg"  class="footer-logo" alt="Logo" >
         </a>
-
 							<!-- copyright -->
 				<p class="copyright">
 					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>

@@ -31,23 +31,25 @@ textarea,
 select[multiple=multiple] {
   @include box-sizing(border-box);
   @include transition(border-color);
-  background-color: $light-gray;
+  background-color: lighten($base-color, 15);
   border-radius: $form-border-radius;
-  border: 1px solid $form-border-color;
   box-shadow: $form-box-shadow;
   font-family: $form-font-family;
   font-size: $form-font-size;
-  margin-bottom: $base-line-height / 2;
-  padding: ($base-line-height / 3) ($base-line-height / 3);
-  width: 100%;
-
+  padding: ($base-line-height / 4) ($base-line-height / 4);
+  display: inline-block;
+  min-width: 70%;
+  outline: none;
+  border: 1px solid lighten($base-color, 15);
+  @include media($small-screen){
+    min-width: 70%;
+  }
   &:hover {
-    border-color: $form-border-color-hover;
+    border-color: $primary-color;
   }
 
   &:focus {
-    border-color: $form-border-color-focus;
-    box-shadow: $form-box-shadow-focus;
+    border-color: $primary-color;
     outline: none;
   }
 }
@@ -84,8 +86,17 @@ input.search-input, button.search-submit{
   border-radius: 0;
 }
 button.search-submit{
-  position: absolute;
-  top: 1px;
-  right: 1px;
-  padding: 0.60em 0.5em;
+  vertical-align: top;
+  display: inline-block;
+  padding: 9px 2em 8px 2em;
+}
+.search-wrapper{
+  text-align: left;
+  margin-top: 1em;
+  @include media ($small-screen){
+    text-align: center;
+  }
+}
+.search-wrapper-fix{
+  text-align: right;
 }

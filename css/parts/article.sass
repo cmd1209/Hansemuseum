@@ -46,18 +46,29 @@ article
   @include omega(2n)
   @include media($small-screen)
     @include span-columns(6)
+  p
+    color: $base-font-color-lightest
   h5
     margin-bottom: 0.25em
+    a
+      color: $primary-color
+      &:hover
+        color: $base-font-color-lightest
   .cat-icon
     position: absolute
     top: -0.5em
     left: 0
-    background-color: $base-font-color-light
+    background-color: $primary-color
     display: block
     width: 40px
     height: 40px
     padding: 0.25em
     border-radius: 50%
     &:hover
-      background-color: $base-color
+      background-color: $base-font-color-light
       box-shadow: 0 0 2px black
+.post-utilities
+  @include outer-container
+  margin-top: 4em
+  @include media($small-screen)
+    text-align: center

@@ -62,7 +62,6 @@ section header.section-header
   padding: 1em
   position: relative
   margin-bottom: 3em
-  border-top: 1em solid $accent-color2
   h2
     text-align: center
     // text-transform: uppercase
@@ -79,13 +78,16 @@ section header.section-header:after
 footer
   text-align: center
   background-color: $base-color
-section:nth-child(2n)
-  background-color: $base-color
-section:nth-child(2n+1)
-  background-color:  $accent-color2
+section.themes
+  background-color: $base-background-color
+section.current-news
+  background-color:  $base-blue-color
   color: $base-font-color-light
 section.main-content
   background-color: $base-background-color
+  overflow: hidden
+section.search-area
+  background-color: $base-color
   overflow: hidden
 
 #owl-demo

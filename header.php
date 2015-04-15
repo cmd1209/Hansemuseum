@@ -14,6 +14,7 @@
 
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         <script src="<?php echo get_template_directory_uri(); ?>/js/owl/owl.carousel.min.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/cookie/jquery.cookie.js"></script>
 
         <?php wp_head(); ?>
         <script>
@@ -35,6 +36,7 @@
                 <p><?php the_field('newsletter', 387); ?></p>
                 <a href="#modal-close" class="close">X</a>
             </div>
+            <div class="fullbacking"></div>
         </div>
 
 
@@ -64,13 +66,19 @@
 
 <div class="wrap no-padding">
         <a href="<?php echo home_url(); ?>" class="logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-round.svg"  width="179px" height="176px" alt="Logo" >
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" >
+            <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/logo-long.svg"  width="696px" height="227px" alt="Logo" > -->
         </a>
     <nav class="service" role="navigation">
       <?php service_nav(); ?>
     </nav>
+</div>
+<div class="mainnavcontainer">
+    <div class="wrap no-padding">
     <nav class="main" role="navigation">
             <?php html5blank_nav(); ?>
     </nav>
+
+    </div>
 </div>
 </header>

@@ -39,24 +39,30 @@
       font-size: 85%;
     }
     &:focus, &:hover{
-      box-shadow: 0 2px 20px 3px $primary-color;
+      box-shadow: 0 0 10px -2px black;
+      .flex-title h5{
+        color: white;
+        padding-bottom: 1em;
+        @include transition (all 0.2s ease-in-out);
+      }
     }
     .flex-title {
       h5{
-        color: $base-font-color-light;
+        color: white;
         position: relative;
+        @include transition (all 0.2s ease-in-out);
         &:after{
           content: "";
           position: absolute;
           left: 50%;
           top: 105%;
-          @include triangle(75px, lighten($base-color, 5), down);
+          @include triangle(75px, $darkest-gray, down);
           z-index: 2;
           @include transform(translateX(-50%));
         }
       }
 
-      background-color: lighten($base-color, 5);
+      background-color: $darkest-gray;
       position: absolute;
       left: 0;
       top: 0;

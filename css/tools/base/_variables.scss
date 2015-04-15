@@ -9,7 +9,7 @@
 $sans-serif: 'PFCentroSansPro-Regular', sans-serif;
 $sans-serif-medium: 'PFCentroSansPro-Medium', sans-serif;
 $serif: 'PFCentroSerifPro-Regular', $georgia, serif;
-$base-font-family: $sans-serif;
+$base-font-family: 'Lato', sans-serif;
 $nav-font-family: $sans-serif-medium;
 $header-font-family: $serif;
 
@@ -26,6 +26,7 @@ $primary-color: #B48550;
 $accent-color: #C50000;
 $accent-color2: #640101;
 $medium-gray: #938a79;
+$base-blue-color: #2a4a63;
 
 
 // Alternative Colors
@@ -43,7 +44,7 @@ $medium-gray: #938a79;
 $light-gray: lighten($medium-gray, 42);
 $dark-gray: darken($medium-gray, 7);
 $darker-gray: darken($medium-gray, 14);
-$darkest-gray: darken($medium-gray, 21);
+$darkest-gray: #3a3f45;
 
 $base-button-color: $primary-color;
 
@@ -53,6 +54,7 @@ $base-background-color: darken($light-gray, 7);
 // Font Colors
 $base-font-color: $dark-gray;
 $base-font-color-light: lighten($base-font-color, 20);
+$base-font-color-lightest: lighten($base-font-color, 35);
 
 // Link Colors
 $base-link-color: $primary-color;
@@ -84,9 +86,6 @@ $form-font-family: $base-font-family;
     -moz-box-shadow: 0px 10px 10px -5px $medium-gray;
     box-shadow: 0px 10px 10px -5px $medium-gray;
 }
-
-
-
 
 
 $large-screen:  new-breakpoint(max-width 1200px 12);

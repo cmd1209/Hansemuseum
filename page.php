@@ -35,13 +35,9 @@
 
   </div>
 </section>
-<section>
+<section class="current-news">
   <?php include("parts/aktuell.php") ?>
 </section>
-
-
-
-
 </main>
 
 <?php get_footer(); ?>
