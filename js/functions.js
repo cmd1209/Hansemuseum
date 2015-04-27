@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    $('.themebox').each(function(i){
+      setTimeout(function(){
+        $('.themebox').eq(i).addClass('is-showing');
+      }, 300 * (i+1));
+    });
+
   var slideWidth = $('#mobilewrap').outerWidth();
   var activatorWidth = $('.mobileactivator').outerWidth();
   var activator = $('.mobileactivator');
@@ -62,10 +68,10 @@ $(function() {
 
 $(document).ready(function() {
 
-  $("#owl-demo").owlCarousel({
-    autoPlay : 3000,
+  $(".owl-carousel").owlCarousel({
+    autoPlay : 8000,
     stopOnHover : true,
-    navigation:true,
+    navigation:false,
     paginationSpeed : 1000,
     goToFirstSpeed : 2000,
     singleItem : true,

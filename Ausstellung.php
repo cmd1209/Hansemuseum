@@ -1,18 +1,8 @@
-<?php get_header(); ?>
+<?php /* Template Name: Austellung */  get_header(); ?>
 <main role="main">
-  <?php if (has_post_thumbnail() ): ?>
-    <section class="hero small">
-      <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-      <div class="slides" style="background:url(<?php echo $featuredImage; ?>)center center;">
-      </div>
-    </section>
-  <?php else: ?>
-<section class="hero small">
-     <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id(297) ); ?>
-      <div class="slides" style="background:url(<?php echo $featuredImage; ?>)center center;">
-      </div>
+<section class="owl-carousel">
+  <?php include("parts/rooms.php"); ?>
 </section>
- <?php endif ?>
 <section class="main-content">
     <div class="wrap">
       <div class="content">
@@ -24,6 +14,7 @@
           <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <?php the_content(); ?>
             <br class="clear">
+
           </article>
         <?php endwhile; ?>
       <?php else: ?>

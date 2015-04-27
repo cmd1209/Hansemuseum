@@ -1,3 +1,9 @@
+section.themes{
+  // background-color: $darkest-gray;
+  @include background(linear-gradient($darkest-gray, $base-blue-color, $darkest-gray) left repeat);
+  // background-color: @include linear-gradient(to top, $darkest-gray, $base-blue-color, $fallback: $darkest-gray);
+}
+
 .flex-boxes {
   ///////////////////////////////////////////////////////////////////////////////////
   a {
@@ -6,7 +12,6 @@
   //////////////////////////////////////////////////////////////////////////////////
   $flex-box-border-color: $light-gray;
   $flex-box-border: 1px solid $flex-box-border-color;
-  $flex-box-background: lighten($light-gray, 10%);
   $flex-box-gutter: 0.5em;
   $flex-box-width: 18em;
   $flex-box-color: $base-font-color;
@@ -22,8 +27,8 @@
     clear: both;
     text-align: left;
 
-
-  .flex-box {
+  .themebox {
+    opacity: 0;
     @include transition (all 0.2s ease-in-out);
     @include flex(2 2 15em);
     @include align-self(stretch);
@@ -34,12 +39,10 @@
     position: relative;
     min-height: 15em;
     overflow: hidden;
-    box-shadow: 0 6px 10px -2px black;
     p{
       font-size: 85%;
     }
     &:focus, &:hover{
-      box-shadow: 0 0 10px -2px black;
       .flex-title h5{
         color: white;
         padding-bottom: 1em;
@@ -56,13 +59,12 @@
           position: absolute;
           left: 50%;
           top: 105%;
-          @include triangle(75px, $darkest-gray, down);
+          @include triangle(75px, $accent-color2, down);
           z-index: 2;
           @include transform(translateX(-50%));
         }
       }
-
-      background-color: $darkest-gray;
+      background-color: $accent-color2;
       position: absolute;
       left: 0;
       top: 0;
@@ -82,4 +84,8 @@
       margin: auto;
     }
   }
+}
+
+.is-showing {
+  opacity: 1!important;
 }

@@ -2,14 +2,14 @@
 header.header
   position: relative
   background-color: $accent-color2
-  background-image: url(../img/h.svg)
+  background-image: url(../img/h-footer.svg)
   background-repeat: no-repeat
   background-size: cover
   background-position: center center
 .bannerinfo
   display: none
   @include media($small-screen)
-    background-color: $base-color
+    background-color: $darkest-gray
     display: block
     padding: 1em
   h2
@@ -54,7 +54,6 @@ nav.service, nav.main
     display: block
     &:hover
       @include transition (all 0.25s ease-in-out)
-      color: $accent-color
 
 nav.service
   text-align: right
@@ -62,7 +61,8 @@ nav.service
   margin-bottom: 8em
   a
     color: white
-
+    &:hover
+      color: $accent-color
 
 .mainnavcontainer
   background-color: white
@@ -86,18 +86,17 @@ nav.main
       display: none
   .sub-menu .menu-item:hover > a
     color: $accent-color
-    background-color: $base-background-color
   .sub-menu .menu-item:hover
     .sub-menu
       display: block
   a
     display: block
     &:hover
-      color: $accent-color!important
+      color: white
   .menu-item .sub-menu
-    @include background(linear-gradient(white, $base-background-color) left repeat)
+    background-color: white
     display: none
-    top: 96%
+    top: 97%
     left: 50%
     position: absolute
     z-index: 1000

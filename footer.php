@@ -25,15 +25,11 @@
 				</div>
 			</div>
         <a href="<?php echo home_url(); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg"  class="footer-logo" alt="Logo" >
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-round.svg"  class="footer-logo" alt="Logo" >
         </a>
 							<!-- copyright -->
 				<p class="copyright">
 					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>
-				</p>
-				<p class="copyright">
-					<?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
 				</p>
 				<!-- /copyright -->
 

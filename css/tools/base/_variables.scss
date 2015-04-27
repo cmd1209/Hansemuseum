@@ -44,7 +44,9 @@ $base-blue-color: #2a4a63;
 $light-gray: lighten($medium-gray, 42);
 $dark-gray: darken($medium-gray, 7);
 $darker-gray: darken($medium-gray, 14);
-$darkest-gray: #3a3f45;
+$darkest-gray: #212c33;
+
+
 
 $base-button-color: $primary-color;
 
@@ -53,6 +55,7 @@ $base-background-color: darken($light-gray, 7);
 
 // Font Colors
 $base-font-color: $dark-gray;
+$base-font-color-dark: darken($base-font-color, 10);
 $base-font-color-light: lighten($base-font-color, 20);
 $base-font-color-lightest: lighten($base-font-color, 35);
 

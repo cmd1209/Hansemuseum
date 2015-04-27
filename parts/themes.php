@@ -24,7 +24,7 @@ $the_query = new WP_Query( $args ); ?>
 <?php $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true); ?>
 
 
-    <a href="<?php the_permalink(); ?>" class="flex-box" style="background: url(<?php echo $thumb_url[0]; ?>)center center;">
+    <a href="<?php the_permalink(); ?>" class="themebox" style="background: url(<?php echo $thumb_url[0]; ?>)center center;">
     <div class="flex-title">
     <h5><?php the_title(); ?></h5>
 <!--     <p><?php the_excerpt(); ?></p> -->

@@ -13,17 +13,19 @@
       </div>
 </section>
  <?php endif ?>
-<section class="main-content">
+<section class="rooms">
+<header class="section-header">
+  <h2> <?php the_title(); ?></h2>
+</header>
     <div class="wrap">
-      <div class="content">
-          <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?>
-        <header class="pageheader">
-            <h1><?php the_title(); ?></h1>
-        </header>
+      <div class="content span-columns-9">
+
+<!--           <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?> -->
             <?php if (have_posts()): while (have_posts()) : the_post(); ?>
           <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <?php the_content(); ?>
             <br class="clear">
+
           </article>
         <?php endwhile; ?>
       <?php else: ?>
@@ -32,6 +34,9 @@
         </article>
       <?php endif; ?>
     </div>
+  <div class="content span-columns-3">
+    <?php wp_nav_menu( array('menu' => 'Rooms' )); ?>
+  </div>
   </div>
 </section>
 

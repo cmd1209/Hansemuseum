@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6, blockquote {
   line-height: $header-line-height;
   margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
-  color: $primary-color;
+  color: $base-font-color-dark;
   font-weight: 400;
 }
 
@@ -89,14 +89,17 @@ p.wp-caption-text{
 
 blockquote{
   position: relative;
-  background-color: $base-color;
-  color: white;
+  background-color: $darkest-gray;
+  color: $base-font-color-light;
   text-align: center;
   margin: 2em 0;
-  padding: 2em;
-  line-height: 1.5em;
+  padding: 1.75em 1em 1em 1em;
+  line-height: $base-font-size * 1.5;
   font-family: $header-font-family;
-  font-size: $base-font-size * 1.65; // 16 * 2 = 32px
+  font-size: $base-font-size * 1.5; // 16 * 2 = 32px
+  p{
+    text-shadow: 1px 1px 5px black;
+  }
   &:before{
     content: "";
     position: absolute;
@@ -133,8 +136,17 @@ cite {
     content: '\2014 \00A0';
   }
 }
-
 ::selection{
     color: white;
     background-color: $primary-color;
   }
+.double{
+  @include columns(2 8em);
+  @include media($small-screen){
+    @include columns(1 8em);
+  }
+  h1,h2,h3,h4,h5,h6{
+    @include column-span(all);
+    margin-bottom: 1em;
+  }
+}
