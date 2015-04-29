@@ -69,10 +69,10 @@ $(function() {
 $(document).ready(function() {
 
   $(".owl-carousel").owlCarousel({
-    autoPlay : 8000,
+    autoPlay : 6000,
     stopOnHover : true,
     navigation:false,
-    paginationSpeed : 1000,
+    paginationSpeed : 700,
     goToFirstSpeed : 2000,
     singleItem : true,
     autoHeight : true,

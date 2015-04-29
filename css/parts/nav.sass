@@ -6,6 +6,7 @@ header.header
   background-repeat: no-repeat
   background-size: cover
   background-position: center center
+  min-height: 9em
 .bannerinfo
   display: none
   @include media($small-screen)
@@ -38,7 +39,9 @@ a.logo
     height: auto
   &:hover
   @include media($small-screen)
-    display: none
+    +transform(translateX(-50%))
+    left: 50%
+
 
 nav.service, nav.main
   @include media($small-screen)

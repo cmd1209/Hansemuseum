@@ -12,6 +12,9 @@
 @import 'parts/rooms'
 @import 'parts/tablepress'
 
+body
+  background-color: $darkest-gray
+
 .pcontain
   @include columns(2)
   @include media($small-screen)
@@ -31,6 +34,10 @@
 .no-padding
   padding: 0 1em
 
+.span-columns-10
+  @include span-columns(10)
+  @include media($small-screen)
+    @include span-columns(4)
 .span-columns-9
   @include span-columns(9)
   @include media($small-screen)
@@ -51,6 +58,10 @@
   @include span-columns(3)
   @include media($small-screen)
     @include span-columns(6)
+.span-columns-2
+  @include span-columns(2)
+  @include media($small-screen)
+    @include span-columns(2)
 
 .content
   padding-top: 1em
@@ -88,16 +99,10 @@ section.main-content
 section.search-area
   background-color: $base-color
   overflow: hidden
-
-#owl-demo
-  .owl-item div
-    padding: 5px
-    border-radius: $base-border-radius
-  .owl-item img
-    display: block
-    width: 100%
-    height: auto
-
+section.subpage-nav
+  background-color: $darkest-gray
+section.owl-theme
+  background-color: white
 header.pageheader
   h1
     text-align: left
@@ -131,3 +136,15 @@ header.pageheader
 // section.funny
 //   background-image: url("../art/backgrounds/stainless-light.png")
 //   @include background(linear-gradient($primary-color, $base-color) left no-repeat)
+#breadcrumbs
+  display: inline-block
+  margin: 0
+.content-nav
+  text-align: center
+  li
+    display: inline-block
+    a
+      display: block
+      &:before
+        content: "/"
+        padding: 0 2px 0 1px
