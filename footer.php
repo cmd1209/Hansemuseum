@@ -5,10 +5,8 @@
 				            <div class="search-wrapper">
                 <?php include("searchform.php"); ?>
             </div>
-					<div class="span-columns-6 fix">
-					<?php html5blank_nav(); ?>
-					</div>
-					<div class="span-columns-6 fix">
+					<div class="two-column-never-1">
+					<?php mobile_nav(); ?>
 					<?php service_nav(); ?>
 					</div>
 

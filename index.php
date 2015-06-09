@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	<main role="main">
         <section class="hero centralt">
-            <?php include("parts/slideshow.php"); ?>
+            <?php include("parts/slideshow2.php"); ?>
         </section>
         <section class="themes">
           <?php include("parts/themes.php"); ?>

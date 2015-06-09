@@ -11,11 +11,14 @@ footer.footer
     @include media ($small-screen)
       @include span-columns(3)
       padding: 2em
-  background-color: $darkest-gray
+  @include background(linear-gradient($base-blue-color, black) left repeat)
   min-height: 8em
   .lang-item
     float: left
     padding-right: 1em
+    @include media($small-screen)
+      float: none
+      padding-left: 0
   .menu-item
     text-align: left
   .gefoerdert

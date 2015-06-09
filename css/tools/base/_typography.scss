@@ -1,7 +1,7 @@
 body {
   -webkit-font-smoothing: antialiased;
   background-color: $base-background-color;
-  color: $base-font-color;
+  color: $base-font-color-dark;
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $unitless-line-height;
@@ -35,6 +35,7 @@ h3{
 
 h4{
   font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
+  line-height: $base-font-size * 1.5;
 }
 
 h5 {
@@ -68,7 +69,6 @@ a {
     outline: none;
   }
 }
-
 hr {
   border-bottom: 1px solid $base-border-color;
   border-left: none;
@@ -76,48 +76,24 @@ hr {
   border-top: none;
   margin: $base-line-height 0;
 }
-
 img, .wp-caption {
   margin: 0;
   max-width: 100%;
   height: auto;
 }
-p.wp-caption-text{
-  color: lighten($base-font-color, 10);
-  padding-left: 1em;
+p.wp-caption-text, .wp-caption-text, .widget_sp_image-description{
+  color: $primary-color;
+  padding-left: 0;
+  font-size: 0.85em;
 }
-
 blockquote{
   position: relative;
-  background-color: $darkest-gray;
-  color: $base-font-color-light;
-  text-align: center;
-  margin: 2em 0;
-  padding: 1.75em 1em 1em 1em;
   line-height: $base-font-size * 1.5;
   font-family: $header-font-family;
   font-size: $base-font-size * 1.5; // 16 * 2 = 32px
-  p{
-    text-shadow: 1px 1px 5px black;
-  }
-  &:before{
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    @include triangle(75px, $base-background-color, down);
-    @include transform(translateX(-50%));
-    z-index: 999;
-  }
-  &:after{
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    @include triangle(75px, $base-background-color, up);
-    @include transform(translateX(-50%));
-    z-index: 999;
-  }
+  color: $base-blue-color;
+  text-align: right;
+  padding: 1em;
   em{
     color: $accent-color;
   }
@@ -142,6 +118,9 @@ cite {
   }
 .double{
   @include columns(2 8em);
+  // p{
+  //   margin-top: 1em;
+  // }
   @include media($small-screen){
     @include columns(1 8em);
   }
@@ -150,3 +129,59 @@ cite {
     margin-bottom: 1em;
   }
 }
+
+
+
+
+// old blockquote
+//
+//
+// blockquote{
+//   position: relative;
+//   background-color: $darkest-gray;
+//   color: $base-font-color-light;
+//   text-align: center;
+//   margin: 2em 0;
+//   padding: 1.75em 1em 1em 1em;
+//   line-height: $base-font-size * 1.5;
+//   font-family: $header-font-family;
+//   font-size: $base-font-size * 1.5; // 16 * 2 = 32px
+//   p{
+//     text-shadow: 1px 1px 5px black;
+//   }
+//   &:before{
+//     content: "";
+//     position: absolute;
+//     left: 50%;
+//     top: 0;
+//     @include triangle(75px, $base-background-color, down);
+//     @include transform(translateX(-50%));
+//     z-index: 999;
+//   }
+//   &:after{
+//     content: "";
+//     position: absolute;
+//     left: 50%;
+//     bottom: 0;
+//     @include triangle(75px, $base-background-color, up);
+//     @include transform(translateX(-50%));
+//     z-index: 999;
+//   }
+//   em{
+//     color: $accent-color;
+//   }
+//   @include media($medium-screen){
+//     margin: 0;
+//     padding: 2em;
+//   }
+// }
+// cite {
+//   color: $base-font-color;
+//   font-style: italic;
+//   font-family: $base-font-family;
+//   font-size: $base-font-size / 2;
+
+//   &:before {
+//     content: '\2014 \00A0';
+//   }
+// }

@@ -11,6 +11,7 @@
 @import 'parts/themes'
 @import 'parts/rooms'
 @import 'parts/tablepress'
+@import 'parts/event'
 
 body
   background-color: $darkest-gray
@@ -26,6 +27,7 @@ body
     @include span-columns(6)
 
 .wrap
+  position: relative
   @include outer-container
   padding: 1em
   @include media($small-screen)
@@ -68,33 +70,18 @@ body
 .logo-spacing
   margin-top: 5em
 
-section header.section-header
-  width: 100%
-  background-color: white
-  padding: 1em
-  position: relative
-  margin-bottom: 3em
-  h2
-    text-align: center
-    // text-transform: uppercase
-    color: $base-color
-section header.section-header:after
-  content: ""
-  position: absolute
-  left: 50%
-  bottom: 0px
-  @include triangle(75px, white, down)
-  +transform(translate(-50%, 100%))
-  z-index: 999
 
 footer
   text-align: center
-  background-color: $base-color
 section.current-news
   background-color:  $base-blue-color
   color: $base-font-color-light
 section.main-content
   background-color: $base-background-color
+  overflow: hidden
+  min-height: 100vh
+section.ausstellung
+  background-color: $darkest-gray
   overflow: hidden
 section.search-area
   background-color: $base-color
@@ -114,6 +101,12 @@ header.pageheader
   margin-bottom: 0.3em
 // Bullet Lists in Text
 .textwidget
+  h4:first-of-type
+    color: $base-blue-color
+    a
+      color: $primary-color
+      &:hover
+        color: $accent-color
   ul
     list-style-type: square
     padding-left: 1em
@@ -124,6 +117,12 @@ header.pageheader
   @include media($small-screen)
     @include columns(1)
 
+.two-column-never-1
+  padding-top: 2em
+  @include columns(2 8em)
+  @include media($small-screen)
+    li
+      text-align: center!important
 #post-404
   padding: 3em 0
   text-align: center
@@ -148,3 +147,55 @@ header.pageheader
       &:before
         content: "/"
         padding: 0 2px 0 1px
+
+section header.section-header
+  width: 100%
+  background-color: white
+  padding: 1em
+  position: relative
+  // margin-bottom: 3em
+  h2
+    text-align: center
+    // text-transform: uppercase
+    color: $base-color
+section header.section-header:after
+  content: ""
+  position: absolute
+  left: 50%
+  bottom: 0px
+  @include triangle(75px, white, down)
+  +transform(translate(-50%, 96%))
+  z-index: 999
+
+section.ausstellung, section.rooms
+  h3, h4, h5, h6
+    color: $primary-color
+  p
+    color: $base-font-color-light
+  .textwidget
+    h4:first-of-type
+      color: $primary-color
+      a
+        color: $accent-color2
+        &:hover
+          color: $accent-color
+
+.open-air
+  padding: 1em
+  padding-top: 2em!important
+  background-color: $darkest-gray
+  color: white
+  p
+    color: white
+  h3, h4, h5
+    color: white
+.joblistings
+  margin-top: 3em
+  ul
+    list-style: square
+  li
+    margin-left: 2em
+.job
+  @include box-shadow
+  padding: 1em
+  background-color: white

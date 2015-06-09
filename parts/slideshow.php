@@ -1,5 +1,11 @@
-<div class="heroslideshow">
+<div class="slogan-container">
+  <h2 class="slogan-1">Herzlich willkommen im Europäischen Hansemuseum!</h2>
+  <h2 class="slogan-2">Welcome to the European Hansemuseum!</h2>
+  <h2 class="slogan-3">Hjärtligt välkommen till Europäisches Hansemuseum!</h2>
+  <h2 class="slogan-4">Добро пожаловать в Европейский музей Ганзы!</h2>
+</div>
 
+<div class="heroslideshow">
 <?php // the query slideshow test
 $args = array( 'post_type' => 'page', 'posts_per_page' => '6', 'orderby' => 'menu_order', 'post__in' => array(65,194,95,197,191,102));
 $the_query = new WP_Query( $args ); ?>
@@ -9,15 +15,15 @@ $the_query = new WP_Query( $args ); ?>
 
 <?php $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true); ?>
 
-  <div class="slides" style="background:url(<?php echo $thumb_url[0]; ?>) ;">
-    <div class="lockup-container">
+  <div class="slides" style="background-image:url(<?php echo $thumb_url[0]; ?>) ;">
+<!--     <div class="lockup-container">
     <div class="lockup">
       <h2><?php the_title(); ?></h2>
       <h2 class="textshift">
         <?php the_excerpt(); ?>
       </h2>
     </div>
-    </div>
+    </div> -->
   </div>
   <?php endwhile; ?>
  <!-- end of the loop -->

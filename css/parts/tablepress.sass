@@ -3,6 +3,7 @@
     vertical-align: middle!important
 table.price
   border: none
+  box-shadow: 0 20px 14px -20px $darkest-gray
   table-layout: auto
   tr td:nth-child(1), tr td:nth-child(2), tr td:nth-child(3)
     font-size: 1.25em
@@ -10,12 +11,16 @@ table.price
   i
     font-size: 0.65em!important
   th
-    background-color: $base-color
+    background-color: $accent-color2
     color: white
+  th.column-1
+    border-radius: $base-border-radius*2 0 0 0
   th.column-2
-    border-top: 1em solid lighten($base-color, 5)
-    border-bottom: 1em solid lighten($base-color, 5)
-    background-color: lighten($base-color, 5)
+    // border-top: 2em solid lighten($accent-color2, 5)
+    // border-bottom: 1em solid lighten($accent-color2, 5)
+    background-color: $accent-color2
+  th.column-3
+    border-radius: 0 $base-border-radius*2 0 0
   th, td
     text-align: center
     border-top: none
@@ -23,19 +28,19 @@ table.price
   tbody td.column-2
     width: 45%
   tr:nth-child(2n-1)
-    background-color: darken($primary-color, 5)
-    color: white
+    background-color: lighten($base-background-color  , 10)
+    color: $darkest-gray
     td.column-2
-      background-color: $primary-color
-      border-top: 1em solid $primary-color
-      border-bottom: 1em solid $primary-color
+      background-color: lighten($base-background-color  , 10)
+      // border-top: 1em solid $darkest-gray
+      // border-bottom: 1em solid $darkest-gray
   tr:nth-child(2n)
-    background-color: darken(white, 5)
-    color: $base-font-color
+    background-color: lighten($base-background-color  , 4)
+    color: $darkest-gray
     td.column-2
-      background-color: white
-      border-top: 1em solid white
-      border-bottom: 1em solid white
+      background-color: lighten($base-background-color  , 4)
+      // border-top: 1em solid white
+      // border-bottom: 1em solid white
   td.column-1, td.column-3
     font-size: 2.5em
     @include media($small-screen)
@@ -43,3 +48,22 @@ table.price
     span
       font-size: 65%
       vertical-align: top
+  tr:last-child
+    td.column-1
+      border-radius: 0 0 0 $base-border-radius*2
+    td.column-3
+      border-radius: 0 0 $base-border-radius*2 0
+
+.tablepress.kombi
+  @extend table.price
+  @extend .tablepress.price
+  td.column-1, td.column-3
+    font-size: 1.25em
+  td.column-2
+    font-size: 2.5em!important
+    @include media($small-screen)
+      font-size: 1.75em!important
+    span
+      font-size: 65%!important
+      vertical-align: top
+

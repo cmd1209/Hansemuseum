@@ -7,11 +7,11 @@
   <p>some other language is selected</p>
 <?php endif; ?>
 </header>
-<div class="wrap">
-<div class="flex-boxes">
+<div class="theme-wrap">  <! lets have some fun with this class should be .wrap and .no-padding --!>
+<div class="grid-items-lines">
 <?php
 // the query
-$args = array( 'post_type' => 'page', 'posts_per_page' => '7', 'orderby' => 'menu_order', 'order' => 'ASC', 'post__in' => array(65,194,95,197,191,102,297));
+$args = array( 'post_type' => 'page', 'posts_per_page' => '6', 'orderby' => 'menu_order','post__in' => array(297,703,62,98,709,150));
 $the_query = new WP_Query( $args ); ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
@@ -21,11 +21,11 @@ $the_query = new WP_Query( $args ); ?>
   <!-- the loop -->
   <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-<?php $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true); ?>
+<?php $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id,'large', true); ?>
 
 
-    <a href="<?php the_permalink(); ?>" class="themebox" style="background: url(<?php echo $thumb_url[0]; ?>)center center;">
-    <div class="flex-title">
+    <a href="<?php the_permalink(); ?>" class="grid-item" style="background: url(<?php echo $thumb_url[0]; ?>)center center;">
+    <div class="grid-title">
     <h5><?php the_title(); ?></h5>
 <!--     <p><?php the_excerpt(); ?></p> -->
     </div>

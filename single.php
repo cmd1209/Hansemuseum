@@ -22,10 +22,10 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<header>
 							<h3><?php the_title(); ?></h3>
-							<div class="postinfo">
+<!-- 							<div class="postinfo">
 								<a href="<?php echo get_category_link($cat);?>" class="icon" title="<?php echo $cat->cat_name; ?>"> <?php include("parts/icon-selector.php") ?></a>
 								<p><?php echo $cat->cat_name; ?> | <span class="date"><?php the_date(); ?></span></p>
-							</div>
+							</div> -->
 						</header>
 
 						<?php the_content(); ?>

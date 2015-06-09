@@ -26,21 +26,21 @@
         });
         </script>
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-10932812-6', 'hansemuseum.eu');
+  ga('send', 'pageview');
+
+</script>
 
 	</head>
 	<body <?php body_class(); ?>>
 
-
-        <div class="modal" id="modal">
-            <div class="modal-container">
-                <p><?php the_field('newsletter', 387); ?></p>
-                <a href="#modal-close" class="close">X</a>
-            </div>
-            <div class="fullbacking"></div>
-        </div>
-
-
-<div id="mobilewrap">
+<div id="mobilewrap" class="is-hidden">
     <nav class="mobile">
         <?php mobile_nav(); ?>
     </nav>
@@ -57,13 +57,13 @@
     <nav class="service" role="navigation">
       <?php service_nav(); ?>
     </nav>
+<!--     <?php include("parts/termin.php") ?> -->
 </div>
 <div class="mainnavcontainer">
     <div class="wrap no-padding">
     <nav class="main" role="navigation">
             <?php html5blank_nav(); ?>
     </nav>
-
     </div>
 </div>
 </header>

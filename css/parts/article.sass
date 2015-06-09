@@ -3,7 +3,6 @@ article
   @include media($small-screen)
     padding: 2em 0
   header
-    border-bottom: 1px solid $base-font-color
     padding: 2em 0 0 0
     margin-bottom: 1em
   .icon
@@ -37,7 +36,6 @@ article
   @include span-columns(3)
   @include media($small-screen)
     @include span-columns(6)
-
 .news
   width: 100%
   position: relative
@@ -67,8 +65,13 @@ article
     &:hover
       background-color: $base-font-color-light
       box-shadow: 0 0 2px black
+
 .post-utilities
   @include outer-container
   margin-top: 4em
   @include media($small-screen)
     text-align: center
+
+hr.dark
+  border: 0
+  border-top: 1px solid $base-blue-color

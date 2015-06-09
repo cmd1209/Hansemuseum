@@ -31,7 +31,7 @@ textarea,
 select[multiple=multiple] {
   @include box-sizing(border-box);
   @include transition(border-color);
-  background-color: lighten($base-color, 15);
+  background-color: lighten($base-background-color, 5);
   border-radius: $form-border-radius;
   box-shadow: $form-box-shadow;
   font-family: $form-font-family;
@@ -40,7 +40,7 @@ select[multiple=multiple] {
   display: inline-block;
   min-width: 70%;
   outline: none;
-  border: 1px solid lighten($base-color, 15);
+  border: 1px solid lighten($base-background-color, 5);
   @include media($small-screen){
     min-width: 70%;
   }

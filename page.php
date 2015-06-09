@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 <main role="main">
-  <?php if (has_post_thumbnail() ): ?>
+
+<!-- ditch the post thumbnail to get as fast as possible to the content -->
+<!--   <?php if (has_post_thumbnail() ): ?>
     <section class="hero small">
       <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
       <div class="slides" style="background:url(<?php echo $featuredImage; ?>)center center;">
@@ -12,7 +14,7 @@
       <div class="slides" style="background:url(<?php echo $featuredImage; ?>)center center;">
       </div>
 </section>
- <?php endif ?>
+ <?php endif ?> -->
 <section class="main-content">
   <header class="section-header">
     <h2> <?php the_title(); ?></h2>

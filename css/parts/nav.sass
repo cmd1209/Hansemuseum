@@ -29,18 +29,18 @@ header.header
     margin-top: 0.5em
 a.logo
   top: 0.5em
+  left: 3em
   position: absolute
   z-index: 1000
   display: block
-  @include size(12em)
-  @include transition (all 0.25s ease-in-out)
+  width: 12em
+  height: auto
   img
     width: 100%
     height: auto
   &:hover
   @include media($small-screen)
-    +transform(translateX(-50%))
-    left: 50%
+    left: 5em
 
 
 nav.service, nav.main
@@ -52,7 +52,7 @@ nav.service, nav.main
     @include transition (all 0.25s ease-in-out)
     font-family: $nav-font-family
     text-transform: uppercase
-    color: $accent-color2
+    color: $darkest-gray
     padding: 0.5em
     display: block
     &:hover
@@ -97,14 +97,15 @@ nav.main
     &:hover
       color: white
   .menu-item .sub-menu
-    background-color: white
+    @include linear-gradient(white, darken($base-background-color,5))
     display: none
     top: 97%
     left: 50%
     position: absolute
-    z-index: 1000
+    z-index: 1100
     min-width: 150px
     +transform(translateX(-50%))
+    -webkit-box-shadow: 0 7px 10px -10px black
     a
       display: block
       font-size: 0.8em
@@ -120,7 +121,6 @@ nav.main
     left: 100%!important
     top: 0
 
-
   .current-menu-item a
     color: $accent-color
 
@@ -129,29 +129,30 @@ nav.main .menu-item:last-child
   .sub-menu .sub-menu
     left: -85%!important
 
-nav.main
-  .current-menu-item:after
-    content: ""
-    position: absolute
-    left: 50%
-    bottom: -34px
-    @include triangle(75px, white, down)
-    +transform(translateX(-50%))
-    z-index: 999
-  .sub-menu
-    .current-menu-item:after
-      display: none
+// Triangle for active menu elements - not really needed
+// nav.main
+//   .current-menu-item:after, .current-page-ancestor:after
+//     content: ""
+//     position: absolute
+//     left: 50%
+//     bottom: -34px
+//     @include triangle(75px, white, down)
+//     +transform(translateX(-50%))
+//     z-index: 999
+//   .sub-menu
+//     .current-menu-item:after
+//       display: none
 
 .modal-container
   position: fixed
-  max-width: 450px
-  top: 20%
+  max-width: 960px
+  top: 50%
   left: 50%
   border-radius: $base-border-radius
   padding: 2em
   background-color: $base-background-color
   z-index: 1003
-  @include transform(translate(-50%, -700%))
+  @include transform(translate(-50%, -900%))
   &:after
     content: ""
     position: absolute
@@ -168,7 +169,7 @@ nav.main
     display: none
     position: fixed
     content: ""
-    @include background(linear-gradient(rgba($base-color,0.95), rgba($primary-color,0.95)) left no-repeat)
+    @include background(linear-gradient(rgba($base-blue-color,0.95), rgba($darkest-gray,0.95)) left no-repeat)
     top: 0
     left: 0
     width: 100%
@@ -197,7 +198,7 @@ nav.main
   display: none
   position: fixed
   content: ""
-  @include background(linear-gradient(rgba($base-color,0.95), rgba($primary-color,0.95)) left no-repeat)
+  @include background(linear-gradient(rgba($darkest-gray,0.95), rgba($base-blue-color,0.95)) left no-repeat)
   top: 0
   left: 0
   width: 100%
@@ -207,3 +208,43 @@ nav.main
 .is-open
   @include transition(translateY, 0.3s ease-in)
   @include transform(translate(-50%, -50%))
+.latest-event
+  min-width: 100%
+  text-align: right
+  position: absolute
+  bottom: 3em
+  right: 1em
+  padding: 0.5em 0
+  color: white
+  @include media($small-screen)
+    display: none
+  ul.bulletin-board
+    padding: 0 1em
+    text-align: right
+  h5
+    color: white
+  a
+    font-weight: 600
+    color: white
+    &:hover
+      color: $accent-color
+  .bulletin
+    position: absolute
+    right: 0
+
+  .event-icon
+    display: block
+    border-radius: 50%
+    text-align: center
+    position: relative
+    float: right
+    img
+      margin-left: 0.5em
+      width: 0.85em
+      height: auto
+    &:hover
+      img
+        background-color: $accent-color
+#menu-item-211-en, #menu-item-165-en
+  a
+    padding-right: 0!important

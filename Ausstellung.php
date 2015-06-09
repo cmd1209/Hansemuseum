@@ -1,12 +1,9 @@
 <?php /* Template Name: Austellung */  get_header(); ?>
 <main role="main">
-<section class="owl-carousel">
-  <?php include("parts/rooms.php"); ?>
-</section>
-<section class="main-content">
+<section class="ausstellung">
   <header class="section-header">
     <h2> <?php the_title(); ?></h2>
-    <div class="wrap">
+    <div class="wrap no-padding">
 <ul class="content-nav">
   <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?>
   <?php

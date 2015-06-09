@@ -1,23 +1,24 @@
 <?php // the query slideshow test
-$args = array( 'post_type' => 'rooms', 'posts_per_page' => '4', 'orderby' => 'menu_order', 'post__in' => array());
+$args = array( 'post_type' => 'rooms', 'orderby' => 'menu_order', 'post__in' => array());
 $the_query = new WP_Query( $args ); ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
   <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 <?php $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true); ?>
+<div class="room">
+
 
   <div class="rundgang" style="background:url(<?php echo $thumb_url[0]; ?>) ;">
-    <div class="lockup-container">
-    <div class="lockup">
-      <h2><?php the_title(); ?></h2>
-      <h2 class="textshift">
-        <?php the_excerpt(); ?>
-      </h2>
-        <h4><a href="<?php the_permalink(); ?>">Go!</a></h4>
-    </div>
-    </div>
+    <h3 class="adjective"><?php the_field('room-adjective'); ?></h3>
   </div>
+  <div class="rundgang-caption">
+      <h2><?php the_title(); ?></h2>
+      <h5> <?php the_excerpt(); ?> </h5>
+  </div>
+
+
+</div>
   <?php endwhile; ?>
  <!-- end of the loop -->
   <!-- pagination here -->

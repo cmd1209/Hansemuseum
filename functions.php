@@ -417,8 +417,6 @@ add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditi
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
-add_action('init', 'create_post_type_press_releases'); // Add our HTML5 Blank Custom Post Type
-add_action('init', 'create_post_type_rooms'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -469,43 +467,8 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 	Custom Post Types
 \*------------------------------------*/
 
-// Create 1 Custom Post type for a Demo, called HTML5-Blank
-function create_post_type_press_releases()
-{
-    register_taxonomy_for_object_type('category', 'Press Releases'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'Press Releases');
-    register_post_type('Press Releases', // Register Custom Post Type
-        array(
-        'labels' => array(
-            'name' => __('Press Releases', 'Press Releases'), // Rename these to suit
-            'singular_name' => __('Press Release', 'Press Release'),
-            'add_new' => __('Add New', 'Press Release'),
-            'add_new_item' => __('Add New Press Release', 'Press Releases'),
-            'edit' => __('Edit', 'Press Release'),
-            'edit_item' => __('Edit Press Release', 'Press Releases'),
-            'new_item' => __('New Press Release', 'Press Releases'),
-            'view' => __('View Press Releases', 'Press Releases'),
-            'view_item' => __('View Press Release', 'Press Releases'),
-            'search_items' => __('Search Press Releases', 'Press Releases'),
-            'not_found' => __('No Press Releasess found', 'Press Releases'),
-            'not_found_in_trash' => __('No Press Releasess found in Trash', 'Press Releases')
-        ),
-        'public' => true,
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-        'has_archive' => true,
-        'supports' => array(
-            'title',
-            'editor',
-            'excerpt',
-            'thumbnail'
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
-        'can_export' => true, // Allows export in Tools > Export
-        'taxonomies' => array(
-            'post_tag',
-            'category'
-        ) // Add Category and Post Tags support
-    ));
-}
+
+add_action('init', 'create_post_type_rooms'); // Add our HTML5 Blank Custom Post Type
 
 function create_post_type_Rooms()
 {
