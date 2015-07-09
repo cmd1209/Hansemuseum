@@ -19,7 +19,7 @@
       <div class="joblistings">
 
         <?php // the query slideshow test
-$args = array( 'post_type' => 'Job', 'orderby' => 'menu_order', 'post__in' => array());
+$args = array( 'post_type' => 'Job', 'order' => 'DESC', 'post__in' => array());
 $the_query = new WP_Query( $args ); ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
@@ -47,5 +47,3 @@ $the_query = new WP_Query( $args ); ?>
 </section>
 </main>
 <?php get_footer(); ?>
-
-
