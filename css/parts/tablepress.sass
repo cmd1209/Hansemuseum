@@ -67,3 +67,64 @@ table.price
       font-size: 65%!important
       vertical-align: top
 
+table.price2
+  box-shadow: 0 20px 14px -20px $darkest-gray
+.tablepress.price2
+  span
+    font-size: 75%
+  th, td
+    border-top: none
+    border-bottom: none
+  .column-1
+    background-color: $accent-color2
+    color: white
+    padding-left: 1em
+  .column-2, .column-3, .column-4
+    text-align: right
+    padding-right: 1em
+    background-color: white
+    color: $darkest-gray
+  th.column-1, th.column-2, th.column-3, th.column-4
+    background-color: $accent-color2
+    color: white
+  td.column-2, td.column-3, td.column-4
+    font-size: 150%
+  tr:nth-child(2n)
+    td
+      background-color: darken(white,5)
+    td.column-1
+      background-color: darken($accent-color2,5)
+  th.column-1
+    border-radius: $base-border-radius*2 0 0 0
+  th.column-4
+    border-radius: 0 $base-border-radius*2 0 0
+  tr:last-child
+    td.column-1
+      border-radius: 0 0 0 $base-border-radius*2
+    td.column-4
+      border-radius: 0 0 $base-border-radius*2 0
+
+table.guide
+  @extend .tablepress.price2
+  th, td
+    border-top: none!important
+    border-bottom: none!important
+  th.column-3
+    border-radius: 0 $base-border-radius*2 0 0
+  tr:last-child
+    td.column-1
+      border-radius: 0 0 0 $base-border-radius*2
+    td.column-3
+      border-radius: 0 0 $base-border-radius*2 0
+table.year
+  @extend .tablepress.price2
+  th, td
+    border-top: none!important
+    border-bottom: none!important
+  th.column-2
+    border-radius: 0 $base-border-radius*2 0 0
+  tr:last-child
+    td.column-1
+      border-radius: 0 0 0 $base-border-radius*2
+    td.column-2
+      border-radius: 0 0 $base-border-radius*2 0
