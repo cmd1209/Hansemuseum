@@ -9,7 +9,7 @@
 $sans-serif: 'PFCentroSansPro-Regular', sans-serif;
 $sans-serif-medium: 'PFCentroSansPro-Medium', sans-serif;
 $serif: 'PFCentroSerifPro-Regular', $georgia, serif;
-$base-font-family: 'Lato', sans-serif;
+$base-font-family: $sans-serif;
 $nav-font-family: $sans-serif-medium;
 $header-font-family: $serif;
 
