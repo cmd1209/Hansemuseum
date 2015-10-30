@@ -1,9 +1,8 @@
 // Typography
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+// @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web);
 @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
-
 
 // $sans-serif: lato, sans-serif;
 $sans-serif: 'PFCentroSansPro-Regular', sans-serif;
@@ -29,7 +28,6 @@ $accent-color2: #09a0e5;
 $medium-gray: #938a79;
 $base-blue-color: #2a4a63;
 
-
 // Alternative Colors
 // $base-color: #150c2a;
 // $red: #9D0D1C;
@@ -44,8 +42,6 @@ $light-gray: lighten($medium-gray, 42);
 $dark-gray: darken($medium-gray, 7);
 $darker-gray: darken($medium-gray, 14);
 $darkest-gray: #212c33;
-
-
 
 $base-button-color: $primary-color;
 
@@ -95,7 +91,6 @@ $form-font-family: $base-font-family;
     -moz-box-shadow: 0px 10px 10px -5px black;
     box-shadow: 0px 10px 10px -5px black;
 }
-
 
 $large-screen:  new-breakpoint(max-width 1200px 12);
 $medium-screen: new-breakpoint(max-width  992px 12);
